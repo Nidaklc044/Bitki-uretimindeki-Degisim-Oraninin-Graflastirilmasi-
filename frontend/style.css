@@ -1,0 +1,113 @@
+/* Harita ve paneller için genel stil */
+.map-container, .panel-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+/* Harita */
+#map {
+    left: 0;
+    width: calc(6/7 * 100vw); /* Haritanın 6/7 oranında genişlik */
+}
+
+/* Meyve Paneli */
+#fruit-panel {
+    right: 0;
+    width: calc(1/7 * 100vw - 40px); /* Panelin genişliği 1/7 oranında ve 40 piksel küçültme */
+    background-color: #f0f4f8; /* Hafif mavi arka plan */
+    padding: 20px; /* padding artırıldı */
+    transition: width 0.5s ease; /* Geçiş efekti ekleyerek boyut değişikliği animasyonu */
+    overflow-y: auto;
+    position: fixed; /* Panelin sabit kalmasını sağlar */
+    top: 0; /* Sayfanın üst kısmına sabitlenir */
+    bottom: 0; /* Sayfanın alt kısmına sabitlenir */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hafif gölge ekleyerek 3D etkisi */
+    border-radius: 10px 0 0 10px; /* Yuvarlatılmış köşeler */
+}
+
+/* Paneldeki kategori başlıkları */
+.category-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333; /* Koyu gri renk */
+    border-bottom: 2px solid #ccc; /* Alt çizgi */
+    padding-bottom: 5px; /* Alt boşluk */
+}
+
+/* Paneldeki meyve öğeleri */
+.fruit-item {
+    cursor: pointer;
+    margin-bottom: 15px; /* Boşluk artırıldı */
+    padding: 10px; /* İçerik dolgulandı */
+    background-color: #fff; /* Beyaz arka plan */
+    border-radius: 5px; /* Yuvarlatılmış köşeler */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hafif gölge ekleyerek kart görünümü */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Geçiş efekti */
+    display: flex; /* İkon ve metni yan yana yerleştir */
+    align-items: center; /* Dikey hizalama */
+}
+
+.fruit-item:hover {
+    background-color: #e0e0e0; /* Hover'da arka plan rengi */
+    transform: translateY(-2px); /* Hover'da hafif yukarı kaldırma efekti */
+}
+
+.fruit-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    background-color: #ddd; /* İkon arka planı */
+    border-radius: 50%; /* Daire şekli */
+    line-height: 30px;
+    text-align: center;
+    font-size: 16px;
+    color: #555; /* İkon rengi */
+}
+
+.fruit-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Harita container */
+.map-container {
+    height: 100vh;
+    width: calc(100% - 300px);
+    float: left;
+}
+
+/* Panel container */
+.panel-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    border-left: 1px solid #ccc;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+/* Meyve listesi */
+.fruit-list {
+    margin-top: 20px;
+}
+
+/* Meyve öğesi */
+.fruit-item {
+    margin-bottom: 10px;
+}
+
+/* Meyve şekli */
+.fruit-shape {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}

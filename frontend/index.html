@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaflet Harita</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <style>
+        .map-container, .panel-container {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            overflow-y: auto;
+        }
+
+        #map {
+            left: 0;
+            width: calc(6/7 * 100vw);
+        }
+
+        #fruit-panel {
+            right: 0;
+            width: calc(1/7 * 100vw - 40px);
+            background-color: #f9f9f9;
+            padding: 20px;
+            transition: width 0.5s ease;
+            overflow-y: auto;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px 0 0 10px;
+        }
+
+        .category-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #555;
+        }
+
+        .fruit-item {
+            cursor: pointer;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .fruit-item:hover {
+            background-color: #e0e0e0;
+            transform: translateY(-2px);
+        }
+
+        .fruit-icon {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            background-color: #ddd;
+            border-radius: 50%;
+            line-height: 30px;
+            text-align: center;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .fruit-name {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .fruit-list .fruit-item.meyve { background-color: #F8BBD0; }
+        .fruit-list .fruit-item.sebze { background-color: #C8E6C9; }
+        .fruit-list .fruit-item.baklagil { background-color: #BBDEFB; }
+        .fruit-list .fruit-item.kuruyemiş { background-color: #FFE0B2; }
+        .fruit-list .fruit-item.diger { background-color: #B0BEC5; }
+        
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            flex: 1;
+            margin: 0 5px;
+            padding: 10px 15px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="map" class="map-container"></div>
+
+    <div id="fruit-panel" class="panel-container">
+        <h2>Meyve Paneli</h2>
+        <div class="button-container">
+            <a id="button2020" class="button">2020</a>
+            <a id="button2023" class="button">2023</a>
+            <a id="compareButton" class="button">Karşılaştır</a>
+        </div>
+        <div class="fruit-list">
+            <!-- Kategoriler ve meyve öğeleri dinamik olarak eklenecek -->
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script>
+        class FruitCategory {
+            constructor(name, fruits, className) {
+                this.name = name;
+                this.fruits = fruits;
+                this.className = className;
+            }
+        }
+
+        const categories = [
+            new FruitCategory('Meyveler', ['Çilek', 'Kayısı', 'Armut'], 'meyve'),
+            new FruitCategory('Sebzeler', ['Havuç', 'Ispanak', 'Soğan Taze','Şeker Pancarı'], 'sebze'),
+            new FruitCategory('Baklagiller', ['Fasulye,Kuru'], 'baklagil'),
+            new FruitCategory('Kuruyemişler', ['Fındık'], 'kuruyemiş'),
+            new FruitCategory('Diğer', ['Pamuk', 'Çayır Otu Yeşilot'], 'diger')
+        ];
+
+        const fruitPanel = document.getElementById('fruit-panel');
+        const fruitList = document.querySelector('.fruit-list');
+
+        categories.forEach(category => {
+            const categoryTitle = document.createElement('div');
+            categoryTitle.classList.add('category-title');
+            categoryTitle.textContent = category.name;
+            fruitList.appendChild(categoryTitle);
+
+            category.fruits.forEach(fruit => {
+                const fruitItem = document.createElement('div');
+                fruitItem.classList.add('fruit-item');
+                fruitItem.classList.add(category.className);
+                fruitItem.textContent = fruit;
+                fruitItem.addEventListener('click', () => {
+                    showFruitOnMap(fruit);
+                });
+                fruitList.appendChild(fruitItem);
+            });
+        });
+
+        const map = L.map('map').setView([38.9637, 35.2433], 6);
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        let allFruitData = [];
+        const fruitLayers = {};
+
+        async function loadDataForYear(year) {
+            try {
+                const response = await fetch('http://localhost:3000/data');
+                const data = await response.json();
+                allFruitData = data.filter(item => item.year === year);
+
+                Object.values(fruitLayers).forEach(layer => {
+                    map.removeLayer(layer.polyline);
+                    layer.markers.forEach(marker => map.removeLayer(marker));
+                });
+
+                allFruitData.forEach(item => {
+                    const productColor = getProductColor(item.fruit);
+
+                    const lines = item.cities.map((city) => city.location);
+                    const polyline = L.polyline(lines, { color: productColor }).addTo(map);
+
+                    const productIcon = L.icon({
+                        iconUrl: `images/${item.icon}`,
+                        iconSize: [24, 24],
+                        iconAnchor: [24, 48],
+                        popupAnchor: [0, -48]
+                    });
+
+                    const markers = item.cities.map((city) => {
+                        const marker = L.marker(city.location, { icon: productIcon }).addTo(map);
+                        const popupContent = `<strong>Şehir: ${city.name}</strong><br>
+                            Meyve: ${item.fruit}<br>
+                            Alan: ${city.area} km²<br>
+                            Üretim: ${city.manufacture} ton`;
+                        marker.bindPopup(popupContent);
+
+                        marker.on('mouseover', function () {
+                            marker.openPopup();
+                        });
+
+                        return marker;
+                    });
+
+                    fruitLayers[item.fruit] = {
+                        polyline: polyline,
+                        markers: markers
+                    };
+                });
+
+            } catch (error) {
+                console.error('Veri yüklemesi sırasında hata:', error);
+            }
+        }
+
+        function getProductColor(fruit) {
+            const productColors = {
+                "Çilek": "red",
+                "Pamuk": "blue",
+                "Kayısı": "brown",
+                "Çayır Otu Yeşilot": "red",
+                "Fasulye,Kuru": "purple",
+                "Fındık": "brown",
+                "Havuç": "orange",
+                "Ispanak": "darkgreen",
+                "Armut": "black",
+                "Soğan Taze": "yellow",
+                "Şeker Pancarı":"black"
+            };
+            return productColors[fruit] || 'black';
+        }
+
+        function showFruitOnMap(fruit) {
+            Object.values(fruitLayers).forEach(layer => {
+                layer.polyline.setStyle({ opacity: 0.3 });
+                layer.markers.forEach(marker => marker.setOpacity(0.3));
+            });
+
+            if (fruitLayers[fruit]) {
+                fruitLayers[fruit].polyline.setStyle({ opacity: 1 });
+                fruitLayers[fruit].markers.forEach(marker => marker.setOpacity(1));
+            }
+        }
+
+        document.getElementById('button2020').addEventListener('click', () => {
+            loadDataForYear(2020);
+        });
+
+        document.getElementById('button2023').addEventListener('click', () => {
+            loadDataForYear(2023);
+        });
+    </script>
+</body>
+</html>

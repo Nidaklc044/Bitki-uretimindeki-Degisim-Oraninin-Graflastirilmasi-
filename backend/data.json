@@ -1,0 +1,741 @@
+[
+  {
+    "year": 2020,
+    "fruit": "Kayısı",
+    "icon": "apricot.png",
+    "cities": [
+      {
+        "name": "Malatya",
+        "area": 88000,
+        "manufacture": 430000,
+        "location": [38.3555, 38.3096]
+      },
+      {
+        "name": "Mersin",
+        "area": 5500,
+        "manufacture": 25000,
+        "location": [36.8000, 34.6333]
+      },
+      {
+        "name": "Elazığ",
+        "area": 4500,
+        "manufacture": 20000,
+        "location": [38.6819, 39.2264]
+      },
+      {
+        "name": "Kahramanmaraş",
+        "area": 3800,
+        "manufacture": 17000,
+        "location": [37.5858, 36.9371]
+      },
+      {
+        "name": "Iğdır",
+        "area": 3200,
+        "manufacture": 13000,
+        "location": [39.8886, 44.0428]
+      }
+    ]
+  },
+  {
+    "year": 2023,
+    "fruit": "Kayısı",
+    "icon": "apricot.png",
+    "cities": [
+      {
+        "name": "Malatya",
+        "area": 892022,
+        "manufacture": 328767,
+        "location": [ 38.3552, 38.3095 ]
+      },
+      {
+        "name": "Kahramanmaraş",
+        "area": 109100,
+        "manufacture": 39243,
+        "location": [ 37.5846, 36.9378 ]
+      },
+      {
+        "name": "Elazığ",
+        "area": 107806,
+        "manufacture": 27160,
+        "location": [ 38.680969, 39.226398 ]
+      },
+      {
+        "name": "Mersin",
+        "area": 101523,
+        "manufacture": 156590,
+        "location": [ 36.7951, 34.6174 ]
+      },
+      {
+        "name": "Iğdır",
+        "area": 40618,
+        "manufacture": 38441,
+        "location": [ 39.8875, 43.9909 ]
+      }
+    ]
+  },
+  {
+    "year": 2020,
+    "fruit": "Armut",
+    "icon": "pear.png",
+    "cities": [
+      {
+        "name": "Bursa",
+        "area": 28500,
+        "manufacture": 150000,
+        "location": [40.1821, 29.0675]
+      },
+      {
+        "name": "Antalya",
+        "area": 7000,
+        "manufacture": 30000,
+        "location": [36.8969, 30.7133]
+      },
+      {
+        "name": "Ankara",
+        "area": 6000,
+        "manufacture": 25000,
+        "location": [39.9334, 32.8597]
+      },
+      {
+        "name": "Yalova",
+        "area": 4500,
+        "manufacture": 20000,
+        "location": [40.6500, 29.2667]
+      },
+      {
+        "name": "Konya",
+        "area": 3500,
+        "manufacture": 15000,
+        "location": [37.8714, 32.5035]
+      }
+    ]
+  },
+  {
+    "year": 2023,
+    "fruit": "Armut",
+    "icon": "pear.png",
+    "cities": [
+      {
+        "name": "Bursa",
+        "area": 85525,
+        "manufacture": 247795,
+        "location": [40.1824, 29.0671]
+      },
+      {
+        "name": "Antalya",
+        "area": 26439,
+        "manufacture": 37223,
+        "location": [36.8969, 30.7133]
+      },
+      {
+        "name": "Elazığ",
+        "area": 6445,
+        "manufacture": 5321,
+        "location": [38.6677804,39.1777199]
+      },
+      {
+        "name": "Mersin",
+        "area": 6022,
+        "manufacture": 13870,
+        "location": [36.9191168, 34.8858296]
+      },
+      {
+        "name": "Ankara",
+        "area": 5698,
+        "manufacture": 12316,
+        "location": [39.9334, 32.8597]
+      }
+    ]
+  },
+  {
+    "year": 2020,
+    "fruit": "Havuç",
+    "icon": "carrot.png",
+    "cities": [
+      {
+        "name": "Konya",
+        "area": 77660,
+        "manufacture": 522410,
+        "location": [37.883047, 32.325694]
+      },
+      {
+        "name": "Ankara",
+        "area": 28804,
+        "manufacture": 159223,
+        "location": [39.8528505, 32.6182312]
+      },
+      {
+        "name": "Hatay",
+        "area": 22020,
+        "manufacture": 70710,
+        "location": [36.2026, 36.1600]
+      },
+      {
+        "name": "Aksaray",
+        "area": 1858,
+        "manufacture": 6303,
+        "location": [38.3687, 34.0370]
+      },
+      {
+        "name": "Denizli",
+        "area": 1140,
+        "manufacture": 5080,
+        "location": [37.7810495,29.0243073]
+      }
+    ]
+  },
+  {
+    "year": 2023,
+    "fruit": "Havuç",
+    "icon": "carrot.png",
+    "cities": [
+      {
+        "name": "Konya",
+        "area": 77660,
+        "manufacture": 522410,
+        "location": [37.883047, 32.325694]
+      },
+      {
+        "name": "Ankara",
+        "area": 28804,
+        "manufacture": 159223,
+        "location": [39.8528505, 32.6182312]
+      },
+      {
+        "name": "Hatay",
+        "area": 22020,
+        "manufacture": 70710,
+        "location": [36.2026, 36.1600]
+      },
+      {
+        "name": "Aksaray",
+        "area": 1858,
+        "manufacture": 6303,
+        "location": [38.3687, 34.0370]
+      },
+      {
+        "name": "Denizli",
+        "area": 1140,
+        "manufacture": 5080,
+        "location": [37.7810495,29.0243073]
+      }
+    ]
+  },
+  {
+    "year": 2020,
+    "fruit": "Ispanak",
+    "icon": "spinach.png",
+    "cities": [
+      {
+        "name": "Konya",
+        "area": 3500,
+        "manufacture": 80000,
+        "location": [37.883047, 32.325694]
+      },
+      {
+        "name": "İzmir",
+        "area": 2500,
+        "manufacture": 50000,
+        "location": [38.3687, 34.0370]
+      },
+      {
+        "name": "Bursa",
+        "area": 2200,
+        "manufacture": 45000,
+        "location": [38.3687, 34.0370]
+      },
+      {
+        "name": "Ankara",
+        "area": 2000,
+        "manufacture": 40000,
+        "location": [38.3687, 34.0370]
+      },
+      {
+        "name": "Antalya",
+        "area": 1800,
+        "manufacture": 30000,
+        "location": [38.3687, 34.0370]
+      }
+    ]
+  },
+  {
+    "year": 2023,
+    "fruit": "Ispanak",
+    "icon": "spinach.png",
+    "cities": [
+      {
+        "name": "İzmir",
+        "area": 30028,
+        "manufacture": 52019,
+        "location": [38.4192, 27.1287]
+      },
+      {
+        "name": "Ankara",
+        "area": 20451,
+        "manufacture": 50525,
+        "location": [39.8749414,32.809919]
+      },
+      {
+        "name": "Bursa",
+        "area": 13843,
+        "manufacture": 20074,
+        "location": [40.1824, 29.0671]
+      },
+      {
+        "name": "Manisa",
+        "area": 11973,
+        "manufacture": 12641,
+        "location": [38.6141, 27.4254]
+      },
+      {
+        "name": "Adana",
+        "area": 9270,
+        "manufacture": 11231,
+        "location": [36.9975753, 35.1232541]
+      }
+    ]
+  },
+  {
+    "year": 2020,
+    "fruit": "Soğan Taze",
+    "icon": "fresh_onion.png",
+    "cities": [
+      {
+        "name": "Adana",
+        "area": 3200,
+        "manufacture": 60000,
+        "location": [37.0000, 35.3213]
+      },
+      {
+        "name": "Antalya",
+        "area": 2100,
+        "manufacture": 40000,
+        "location": [36.8969, 30.7133]
+      },
+      {
+        "name": "İzmir",
+        "area": 1900,
+        "manufacture": 35000,
+        "location": [38.4192, 27.1287]
+      },
+      {
+        "name": "Mersin",
+        "area": 1600,
+        "manufacture": 30000,
+        "location": [36.8000, 34.6333]
+      },
+      {
+        "name": "Aydın",
+        "area": 1000,
+        "manufacture": 20000,
+        "location": [37.8419, 27.8458]
+      }
+    ]
+  },
+  {
+    "year": 2023,
+    "fruit": "Soğan Taze",
+    "icon": "fresh-onion.png",
+    "cities": [
+      {
+        "name": "Ankara",
+        "area": 14022,
+        "manufacture": 27496,
+        "location": [39.9334, 32.8597]
+      },
+      {
+        "name": "Eskişehir",
+        "area": 2711,
+        "manufacture": 13400,
+        "location": [39.7667, 30.5256]
+      },
+      {
+        "name": "Elazığ",
+        "area": 2512,
+        "manufacture": 4611,
+        "location": [38.680969, 39.226398]
+      },
+      {
+        "name": "Karaman",
+        "area": 2068,
+        "manufacture": 4023,
+        "location": [37.1810, 33.2150]
+      },
+      {
+        "name": "Aksaray",
+        "area": 1832,
+        "manufacture": 2146,
+        "location": [38.3687, 34.0370]
+      }
+    ]
+  },
+  {
+    "year": 2020,
+    "fruit": "Fasulye,Kuru",
+    "icon": "haricot-bean.png",
+    "cities": [
+      {
+        "name": "Niğde",
+        "area": 4200,
+        "manufacture": 50000,
+        "location": [37.9631, 34.6809]
+      },
+      {
+        "name": "Nevşehir",
+        "area": 5600,
+        "manufacture": 70000,
+        "location": [38.6246, 34.7122]
+      },
+      {
+        "name": "Bitlis",
+        "area": 6800,
+        "manufacture": 80000,
+        "location": [38.7223, 35.4853]
+      },
+      {
+        "name": "Konya",
+        "area": 7500,
+        "manufacture": 90000,
+        "location": [37.883047, 32.325694]
+      },
+      {
+        "name": "Karaman",
+        "area": 6800,
+        "manufacture": 80000,
+        "location": [37.1811, 33.2150]
+      }
+    ]
+  },
+  {
+    "year": 2023,
+    "fruit": "Fasulye,Kuru",
+    "icon": "haricot-bean.png",
+    "cities": [
+      {
+        "name": "Niğde",
+        "area": 150.560,
+        "manufacture": 33855,
+        "location": [37.9650, 34.6803]
+      },
+      {
+        "name": "Nevşehir",
+        "area": 118.656,
+        "manufacture": 42205,
+        "location": [38.6246, 34.7237]
+      },
+      {
+        "name": "Bitlis",
+        "area": 97.227,
+        "manufacture": 34971,
+        "location": [38.3989, 42.1236]
+      },
+      {
+        "name": "Konya",
+        "area": 90.770,
+        "manufacture": 31743,
+        "location": [37.8716, 32.4846]
+      },
+      {
+        "name": "Karaman",
+        "area": 54.752,
+        "manufacture": 17735,
+        "location": [37.1811, 33.2159]
+      }
+    ]
+  },
+  {
+    "year": 2020,
+    "fruit": "Pamuk",
+    "icon": "cotton.png",
+    "cities": [
+      {
+        "name": "Şanlıurfa",
+        "area": 30000,
+        "manufacture": 400000,
+        "location": [37.1671, 38.7939]
+      },
+      {
+        "name": "Hatay",
+        "area": 8000,
+        "manufacture": 100000,
+        "location": [36.2026, 36.1600]
+      },
+      {
+        "name": "Aydın",
+        "area": 6400,
+        "manufacture": 80000,
+        "location": [37.8560, 27.8416]
+      },
+      {
+        "name": "Diyarbakır",
+        "area": 4800,
+        "manufacture": 60000,
+        "location": [37.9144, 40.2306]
+      },
+      {
+        "name": "Adana",
+        "area": 4000,
+        "manufacture": 50000,
+        "location": [37.0000, 35.3213]
+      }
+    ]
+  },
+  {
+    "year": 2023,
+    "fruit": "Pamuk",
+    "icon": "cotton.png",
+    "cities": [
+      {
+        "name": "Şanlıurfa",
+        "area": 2034343,
+        "manufacture": 1735619,
+        "location": [37.1671, 38.7939]
+      },
+      {
+        "name": "Diyarbakır",
+        "area": 705158,
+        "manufacture": 597182,
+        "location": [37.9144, 40.2306]
+      },
+      {
+        "name": "Aydın",
+        "area": 565360,
+        "manufacture": 478176,
+        "location": [37.8417, 27.8457]
+      },
+      {
+        "name": "Hatay",
+        "area": 388884,
+        "manufacture": 364465,
+        "location": [36.2026, 36.1600]
+      },
+      {
+        "name": "İzmir",
+        "area": 248526,
+        "manufacture": 226753,
+        "location": [38.4192, 27.1287]
+      }
+    ]
+  },
+  {
+    "year": 2020,
+    "fruit": "Fındık",
+    "icon": "hazelnut.png",
+    "cities": [
+      {
+        "name": "Ordu",
+        "area": 200000,
+        "manufacture": 200000,
+        "location": [40.9839, 37.8785]
+      },
+      {
+        "name": "Sakarya",
+        "area": 120000,
+        "manufacture": 120000,
+        "location": [40.7569, 30.3782]
+      },
+      {
+        "name": "Giresun",
+        "area": 100000,
+        "manufacture": 100000,
+        "location": [40.6631, 38.5353]
+      },
+      {
+        "name": "Düzce",
+        "area": 80000,
+        "manufacture": 80000,
+        "location": [40.8776, 31.2497]
+      },
+      {
+        "name": "Trabzon",
+        "area": 60000,
+        "manufacture": 60000,
+        "location": [41.0015, 39.7178]
+      }
+    ]
+  },
+  {
+    "year": 2023,
+    "fruit": "Fındık",
+    "icon": "hazelnut.png",
+    "cities": [
+      {
+        "name": "Ordu",
+        "area": 2272158,
+        "manufacture": 198841,
+        "location": [40.9830, 37.8785]
+      },
+      {
+        "name": "Samsun",
+        "area": 1210679,
+        "manufacture": 112536,
+        "location": [41.2867, 36.33]
+      },
+      {
+        "name": "Giresun",
+        "area": 1177290,
+        "manufacture": 72060,
+        "location": [40.9128, 38.3895]
+      },
+      {
+        "name": "Sakarya",
+        "area": 792272,
+        "manufacture": 82581,
+        "location": [40.7741, 30.0868]
+      },
+      {
+        "name": "Trabzon",
+        "area": 652379,
+        "manufacture": 29505,
+        "location": [40.9831, 39.7297]
+      }
+    ]
+  },
+  {
+    "fruit": "Çilek",
+    "icon": "strawberry.png",
+    "2020": {
+      "cities": [
+        {
+          "name": "Mersin",
+          "area": 81.3,
+          "manufacture": 254000,
+          "location": [36.7959, 34.6179]
+        },
+        {
+          "name": "Antalya",
+          "area": 28.7,
+          "manufacture": 60000,
+          "location": [36.8969, 30.7133]
+        },
+        {
+          "name": "Aydın",
+          "area": 21.3,
+          "manufacture": 60000,
+          "location": [37.8417, 27.8457]
+        },
+        {
+          "name": "Bursa",
+          "area": 15.8,
+          "manufacture": 49000,
+          "location": [40.1821, 29.0675]
+        },
+        {
+          "name": "Konya",
+          "area": 10.0,
+          "manufacture": 35000,
+          "location": [37.8716, 32.4846]
+        }
+      ]
+    },
+    "2023": {
+      "cities": [
+        {
+          "name": "Mersin",
+          "area": 35.921,
+          "manufacture": 167607,
+          "location": [36.7959, 34.6179]
+        },
+        {
+          "name": "Konya",
+          "area": 29.646,
+          "manufacture": 66908,
+          "location": [37.8716, 32.4846]
+        },
+        {
+          "name": "Bursa",
+          "area": 28.645,
+          "manufacture": 45849,
+          "location": [40.4323143, 29.1518248]
+        },
+        {
+          "name": "Aydın",
+          "area": 26.549,
+          "manufacture": 106272,
+          "location": [37.8417, 27.8457]
+        },
+        {
+          "name": "Çanakkale",
+          "area": 21.41,
+          "manufacture": 82504,
+          "location": [40.1553, 26.4142]
+        }
+      ]
+    }
+  },{
+    "fruit": "Soğan Taze",
+    "icon": "fresh-onion.png",
+    "2020": {
+      "cities": [
+        {
+          "name": "Adana",
+          "area": 3.2,
+          "manufacture": 60000,
+          "location": [37.0000, 35.3213]
+        },
+        {
+          "name": "Antalya",
+          "area": 2.1,
+          "manufacture": 40000,
+          "location": [36.8969, 30.7133]
+        },
+        {
+          "name": "İzmir",
+          "area": 1.9,
+          "manufacture": 35000,
+          "location": [38.4192, 27.1287]
+        },
+        {
+          "name": "Mersin",
+          "area": 1.6,
+          "manufacture": 30000,
+          "location": [36.8000, 34.6333]
+        },
+        {
+          "name": "Aydın",
+          "area": 1.0,
+          "manufacture": 20000,
+          "location": [37.8419, 27.8458]
+        }
+      ]
+    },
+    "2023": {
+      "cities": [
+        {
+          "name": "Ankara",
+          "area": 14.022,
+          "manufacture": 27496,
+          "location": [39.9334, 32.8597]
+        },
+        {
+          "name": "Eskişehir",
+          "area": 2.711,
+          "manufacture": 13400,
+          "location": [39.7667, 30.5256]
+        },
+        {
+          "name": "Elazığ",
+          "area": 2.512,
+          "manufacture": 4611,
+          "location": [38.680969, 39.226398]
+        },
+        {
+          "name": "Karaman",
+          "area": 2.068,
+          "manufacture": 4023,
+          "location": [37.1810, 33.2150]
+        },
+        {
+          "name": "Aksaray",
+          "area": 1.832,
+          "manufacture": 2146,
+          "location": [38.3687, 34.0370]
+        }
+      ]
+    }
+  }
+  
+  
+  
+
+]
